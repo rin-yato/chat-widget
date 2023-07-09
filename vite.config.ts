@@ -9,6 +9,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: undefined,
+        // I want only index.js file
+        entryFileNames: "index.js",
       },
     },
   },

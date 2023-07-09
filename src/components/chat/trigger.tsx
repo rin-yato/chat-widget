@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from "../tooltip";
 import { Button } from "../button";
-import { MessagesSquare } from "lucide-react";
+import { Atom } from "lucide-react";
 
 export function ChatTrigger() {
   const { setIsChatOpen } = useContext(ChatOpenContext);
@@ -21,7 +21,7 @@ export function ChatTrigger() {
             variant="outline"
             className="aspect-square h-fit w-fit rounded-full  p-3"
           >
-            <MessagesSquare size="32" className="text-sky-800" />
+            <Atom size="32" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>

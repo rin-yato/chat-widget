@@ -8,7 +8,7 @@ export function ChatList() {
 
   const { messages, isLoading } = useChat({
     id: "default",
-    api: "http://localhost:3000/api/chat",
+    api: "https://ai.just-miracle.space/api/chat",
   });
 
   function scrollToBottom() {

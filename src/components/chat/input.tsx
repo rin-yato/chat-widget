@@ -4,17 +4,15 @@ import { useHotkeys } from "@mantine/hooks";
 import { useChat } from "ai/react";
 import { Input } from "../input";
 
-export function ChatInput() {
+export function ChatInput({ config, apiKey }: any) {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const { input, handleInputChange, handleSubmit } = useChat({
     id: "default",
-    api: "http://localhost:3000/api/chat",
-    // headers: {
-    //   "api-key": "73da1ec8-8b7f-4f3e-92dd-0963ede6d7a5",
-    // },
     body: {
       question: inputRef.current?.value,
-      apiKey: "73da1ec8-8b7f-4f3e-92dd-0963ede6d7a5"
+      userId: apiKey,
+      prompt: config?.prompt,
+      noAnswer: config?.no_answer,
     },
   });
 
