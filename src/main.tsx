@@ -6,7 +6,7 @@ import { Chat } from "./components/chat/index.tsx";
 // import App from "./App.tsx";
 
 ReactDOM.createRoot(
-  document.getElementsByTagName("body")[0] as HTMLElement
+  document.getElementById("just-miracle-ai-chat-widget") as HTMLElement
 ).render(
   <React.StrictMode>
     <>
