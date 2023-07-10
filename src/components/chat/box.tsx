@@ -9,21 +9,24 @@ export function ChatBox() {
   const [apiKey, setApiKey] = React.useState<string>();
 
   React.useEffect(() => {
-    const scriptTagElement = document.querySelector(
-      "#just-miracle-ai-chat-widget"
+    const scriptTagElement = document.getElementById(
+      "just-miracle-ai-chat-widget"
     );
+    console.log("scriptTagElement", scriptTagElement);
 
     if (!scriptTagElement) return;
 
     const apiKey = scriptTagElement.getAttribute("api-key");
-
+    console.log("apiKey", apiKey);
     if (!apiKey) return;
 
     setApiKey(apiKey);
 
     fetch("https://ai.just-miracle.space/api/user-config/" + apiKey)
       .then((res) => res.json())
-      .then((data) => setConfig(data));
+      .then((data) => {
+        setConfig(data);
+      });
   }, []);
 
   if (!apiKey) return null;

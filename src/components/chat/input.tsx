@@ -8,6 +8,7 @@ export function ChatInput({ config, apiKey }: any) {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const { input, handleInputChange, handleSubmit } = useChat({
     id: "default",
+    api: "https://ai.just-miracle.space/api/chat",
     body: {
       question: inputRef.current?.value,
       userId: apiKey,

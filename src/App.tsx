@@ -19,13 +19,10 @@ function App() {
   const chattt = async () => {
     const data = await fetch("http://localhost:3000/api/chat", {
       method: "POST",
-      // headers: {
-      //   "api-key": "73da1ec8-8b7f-4f3e-92dd-0963ede6d7a5",
-      // },
       body: JSON.stringify({
         question: "who is yato?",
         messages: [],
-        apiKey: "73da1ec8-8b7f-4f3e-92dd-0963ede6d7a5"
+        userId: "73da1ec8-8b7f-4f3e-92dd-0963ede6d7a5"
       }),
     });
 
