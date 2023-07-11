@@ -12,7 +12,6 @@ export function ChatBox() {
     const scriptTagElement = document.getElementById(
       "just-miracle-ai-chat-widget"
     );
-    console.log("scriptTagElement", scriptTagElement);
 
     if (!scriptTagElement) return;
 
@@ -33,7 +32,7 @@ export function ChatBox() {
 
   return (
     <div className="z-50 flex max-h-[550px] w-96 flex-col rounded-xl border bg-white py-2 pl-2 pr-0.5">
-      <ChatHeader />
+      <ChatHeader config={config} />
       <Separator className="mt-2" />
       <ChatList />
       <ChatInput config={config} apiKey={apiKey} />
